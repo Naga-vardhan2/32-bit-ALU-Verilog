@@ -1,0 +1,52 @@
+32-BIT ARITHMETIC AND LOGIC UNIT USING VERILOG
+
+This project implements a 32-bit Arithmetic and Logic Unit (ALU) using Verilog HDL.
+The ALU accepts two 32-bit operands and a 4-bit opcode. The opcode selects the
+operation to be performed.
+
+Supported operations:
+0000 - Addition
+0001 - Subtraction
+0010 - AND
+0011 - OR
+0100 - XOR
+0101 - NOT
+0110 - Logical Left Shift
+0111 - Logical Right Shift
+
+WORKFLOW
+
+START
+  |
+  v
+Apply A and B (32-bit)
+  |
+  v
+Apply Opcode (4-bit)
+  |
+  v
+Decode Opcode
+  |
+  +--> Arithmetic Operation
+  |
+  +--> Logical Operation
+  |
+  v
+Generate 32-bit Result
+  |
+  v
+Generate Carry / Zero Flags
+  |
+  v
+END
+
+The Verilog design uses an always @(*) block and a case statement to implement
+combinational logic. The result is verified using a testbench with multiple
+test cases. The design can be simulated using Cadence NC-Sim/Xcelium,
+ModelSim/QuestaSim, or other Verilog simulators.
+
+CONCLUSION
+
+The project demonstrates the design and verification of a basic 32-bit ALU.
+The ALU can be used as a building block for a processor datapath and can be
+extended with additional arithmetic, logical, comparison, and shift operations.
